@@ -1,0 +1,11 @@
+<div>
+  <h1>Usuarios</h1>
+  <div
+    *ngFor="let user of users$ | async; let i = index"
+    [style.margin-bottom]="'24px'"
+  >
+    {{ user.name }} <button (click)="handleRemoveUser(i)">X</button>
+  </div>
+
+  <a routerLink="/create-user">Criar novo usaurio</a>
+</div>
